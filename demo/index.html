@@ -1,0 +1,46 @@
+<html>
+  <body>
+    <script src="../build/build/index.js"></script>
+    <script>
+      var jepson = {
+          "me": `
+          adasd
+          adsadasda
+          dasdadasdasd
+          asdasdasdasd
+          `,
+          //THIS
+          "spoon": [
+            'me'
+          ]
+      };
+      
+      var jepson2 = ["{",
+      '    "me": `',
+      "    adasd",
+      "    adsadasda",
+      "    dasdadasdasd",
+      "    asdasdasdasd",
+      "    `,",
+      '    "this": null,',
+      '    "thiss": false,',
+      '    "thisd": true,',
+      '    "jekke": 12.1,',
+      "    //THIS",
+      '    "spoon": [',
+      "      \"me\"",
+      "    ]",
+      "};"
+      ].join('\n');
+      
+      console.log(jepson);
+      console.log(jepson2);
+
+       function startParse() {
+           var thing = new Parse(jepson2);
+           console.log(thing);
+       }
+       window.onload = startParse;
+    </script>
+  </body>
+</html>
