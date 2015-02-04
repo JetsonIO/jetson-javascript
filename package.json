@@ -2,11 +2,11 @@
   "name": "jetson",
   "version": "0.0.1",
   "description": "Jetson is a JSON format for native ES6 features",
-  "main": "index.js",
+  "main": "lib/ndex.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
-  "author": "",
+  "author": "Jonathan Kingston",
   "license": "ISC",
   "devDependencies": {
     "chai": "^1.10.0",
