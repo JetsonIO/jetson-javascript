@@ -60,6 +60,15 @@ describe('Parse', function(){
     assert.property(val.spoon, 'test', 'Matches properties');
   });
 
+  it('Should be able to cope wit character escapes', function () {
+    var ParsedObject = new Jetson.Parse('{"spoon": {"test": "Test\\n\\"This"}}');
+    var nodes = ParsedObject.parse();
+    var ASTParse = new Jetson.ASTParse(nodes);
+    var val = ASTParse.produce();
+    assert.property(val, 'spoon', 'Matches properties');
+    assert.property(val.spoon, 'test', 'Matches properties');
+  });
+
   it('Parse output works with short syntax', function () {
     var val = Jetson.parse('{"spoon": /* test */ {"test": `me`}}');
     assert.property(val, 'spoon', 'Matches properties');
@@ -89,7 +98,9 @@ describe('Parse', function(){
     assert.property(val, 'spoon', 'Matches properties');
     assert.property(val.spoon, 'test', 'Matches properties');
   });
+});
 
+describe('Parse', function (){
   it('Produce output', function () {
     var val = Jetson.stringify({"spoon": /* test */ {"test": 'me'}});
     assert.equal(val, '{"spoon":{"test":"me"}}', 'Matches output - without comments or whitespace for now');
