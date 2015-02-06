@@ -1,16 +1,19 @@
 BUILD=$(broccoli)
 
 clean:
-	@rm -rf dist/
+	@rm -rf dist/*.js;
+	@rm -rf documentation/*.js;
 
 install:
 	@npm install;
 
 build:
 	gulp;
-#	node build.js
 
-	#/bin/broccoli build dist;
+doc: install build doc-build
+
+doc-build:
+	jsdoc -d documentation dist/;
 
 test: install build test-mocha
 

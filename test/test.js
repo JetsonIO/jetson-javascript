@@ -91,10 +91,10 @@ describe('Parse', function(){
   });
 
   it('Produce output', function () {
-    var val = Jetson.produce({"spoon": /* test */ {"test": 'me'}});
+    var val = Jetson.stringify({"spoon": /* test */ {"test": 'me'}});
     assert.equal(val, '{"spoon":{"test":"me"}}', 'Matches output - without comments or whitespace for now');
 
-    var val = Jetson.produce({"spoon": /* test */ ["test", 'me']});
+    var val = Jetson.stringify({"spoon": /* test */ ["test", 'me']});
     assert.equal(val, '{"spoon":["test","me"]}', 'Matches output - without comments or whitespace for now');
   });
 });
