@@ -13,7 +13,8 @@ build:
 doc: install build doc-build
 
 doc-build:
-	jsdoc -d documentation dist/;
+	jsdoc dist -d doc ./package.json ./README-doc.md;
+	jsdoc dist -d doc ./README-doc.md;
 
 test: install build test-mocha
 
