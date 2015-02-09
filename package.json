@@ -3,8 +3,8 @@
   "version": "0.0.3",
   "description": "Jetson is a JSON format for native ES6 features",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/JetsonIO/jetson-javascript.git"
+    "type": "git",
+    "url": "https://github.com/JetsonIO/jetson-javascript.git"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "gulp-6to5": "^3.0.0",
     "gulp-concat": "^2.4.3",
     "jsdoc": "^3.3.0-beta1",
+    "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master",
     "mocha": "^2.1.0"
   }
 }

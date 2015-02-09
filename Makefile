@@ -13,8 +13,8 @@ build:
 doc: install build doc-build
 
 doc-build:
-	jsdoc dist -d doc ./package.json ./README-doc.md;
-	jsdoc dist -d doc ./README-doc.md;
+	jsdoc dist -t node_modules/jsdoc-baseline/ -d doc ./package.json ./README-doc.md;
+	jsdoc dist -t node_modules/jsdoc-baseline/ -d doc ./README-doc.md;
 
 test: install build test-mocha
 
