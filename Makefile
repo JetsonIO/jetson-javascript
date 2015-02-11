@@ -1,4 +1,4 @@
-BUILD=$(broccoli)
+BIN = ./node_modules/.bin
 
 clean:
 	@rm -rf dist/*.js;
@@ -13,8 +13,8 @@ build:
 doc: install build doc-build
 
 doc-build:
-	jsdoc dist -t node_modules/jsdoc-baseline/ -d doc ./package.json ./README-doc.md;
-	jsdoc dist -t node_modules/jsdoc-baseline/ -d doc ./README-doc.md;
+	$(BIN)/jsdoc dist -t node_modules/jsdoc-baseline/ -d doc ./package.json ./README-doc.md;
+	#$(BIN)/jsdoc dist -t node_modules/jsdoc-baseline/ -d doc ./README-doc.md;
 
 test: install build test-mocha
 

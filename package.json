@@ -19,7 +19,7 @@
     "gulp-6to5": "^3.0.0",
     "gulp-concat": "^2.4.3",
     "jsdoc": "^3.3.0-beta1",
-    "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master",
+    "jsdoc-baseline": "git://github.com/jonathanKingston/jsdoc-baseline#resolve-encoding-readme",
     "mocha": "^2.1.0"
   }
 }
