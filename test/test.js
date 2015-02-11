@@ -60,7 +60,7 @@ describe('Parse', function(){
     assert.property(val.spoon, 'test', 'Matches properties');
   });
 
-  it('Should be able to cope wit character escapes', function () {
+  it('Should be able to cope with character escapes', function () {
     var ParsedObject = new Jetson.Parse('{"spoon": {"test": "Test\\n\\"This"}}');
     var nodes = ParsedObject.parse();
     var ASTParse = new Jetson.ASTParse(nodes);

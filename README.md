@@ -4,7 +4,6 @@ Jetson is a ECMA6 compatible superset of JSON
 
 # Additions to JSON:
 
-- Single line comments `// this is a comment`
 - Multiline comments `/* test */`
 - [Template strings from ECMA6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
   - Template strings are only used for multiline support, interpolation is not supported currently
