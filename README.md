@@ -8,11 +8,14 @@ Jetson is a ECMA6 compatible superset of JSON
 - [Template strings from ECMA6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
   - Template strings are only used for multiline support, interpolation is not supported currently
 
-# Goals
-- Performance; currently checks need to be done for handling bigger documents
-- Consider producing the same AST parse output as [Esprima](http://esprima.org/doc/index.html#ast)
+# Roadmap
+- Move AST code into a tokeniser
+- Support import from [ESTree](https://github.com/estree/estree) and tokeniser to ESTree
+  - Consider running all other code from ESTree instead of tokeniser
+- Support export to JSON
 - Other language support
 - Further testing
+- Performance; currently checks need to be done for handling bigger documents
 
 # Making the repository
 
